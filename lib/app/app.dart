@@ -1,4 +1,8 @@
+import 'package:base/ui/pages/splashscreen/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../ui/pages/home/home.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -6,8 +10,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
+      title: 'Base Flutter',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,7 +24,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(),
+      getPages: [
+        GetPage(name: '/SplashsScreen', page: () => SplashScreenPage()),
+      ],
     );
   }
 }
