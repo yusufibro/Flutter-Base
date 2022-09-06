@@ -1,3 +1,5 @@
+import 'package:base/ui/pages/onboarding/onboarding.dart';
+import 'package:base/ui/pages/profile/profile.dart';
 import 'package:base/ui/pages/splashscreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const SplashScreenPage(),
       getPages: [
         GetPage(name: '/SplashsScreen', page: () => SplashScreenPage()),
       ],
