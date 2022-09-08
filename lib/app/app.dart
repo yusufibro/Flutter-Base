@@ -2,6 +2,8 @@ import 'package:base/ui/pages/auth/notification/notification.dart';
 import 'package:base/ui/pages/auth/register/register.dart';
 import 'package:base/ui/pages/auth/welcome.dart';
 import 'package:base/ui/pages/home/dashboard.dart';
+import 'package:base/ui/pages/onboarding/onboarding.dart';
+import 'package:base/ui/pages/profile/profile.dart';
 import 'package:base/ui/pages/splashscreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomPage(),
+      home: const SplashScreenPage(),
       getPages: [
         GetPage(name: '/SplashsScreen', page: () => SplashScreenPage()),
         GetPage(name: '/LoginPage', page: () => LoginPage()),
