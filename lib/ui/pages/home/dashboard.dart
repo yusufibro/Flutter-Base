@@ -3,6 +3,7 @@ import 'package:base/ui/pages/home/home.dart';
 import 'package:flutter/material.dart';
 
 import '../../theme/colors.dart';
+import '../profile/profile.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _DashboardPageState extends State<DashboardPage> {
   List screenPage = [
     HomePage(),
     Notificationpage(),
-    HomePage(),
+    ProfilePage(),
   ];
 
   void onClicked(int index) {

@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/DashboardPage', page: () => DashboardPage()),
         GetPage(name: '/HomePage', page: () => HomePage()),
         GetPage(name: '/NotificationPage', page: () => Notificationpage()),
+        GetPage(name: '/ProfilePage', page: () => ProfilePage()),
       ],
     );
   }

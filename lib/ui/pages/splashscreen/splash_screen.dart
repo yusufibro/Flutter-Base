@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:base/app/app.dart';
 import 'package:base/ui/pages/onboarding/onboarding.dart';
+import 'package:base/ui/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,13 +28,14 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Scaffold(
       // isi splash screen
       body: Container(
+        width: Get.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFFF9A825),
-              Color(0xFFFF8F00),
+              ThemeColors.kPColor,
+              Color.fromARGB(255, 131, 58, 165),
             ],
           ),
         ),

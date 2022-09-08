@@ -171,7 +171,10 @@ class BannerRecommendWidget extends StatelessWidget {
                         Text(
                           "🛵 Rp. 500.000",
                         ),
-                        Icon(Icons.favorite, color: Color.fromARGB(255, 233, 30, 169),)
+                        Icon(
+                          Icons.favorite,
+                          color: Color.fromARGB(255, 233, 30, 169),
+                        )
                       ],
                     ),
                   ],
@@ -179,6 +182,62 @@ class BannerRecommendWidget extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ButtonProfileWidget extends StatelessWidget {
+  String? text;
+  VoidCallback? press;
+  Color? textColor;
+  IconData? icon;
+  IconData? icon2;
+  ButtonProfileWidget({
+    Key? key,
+    this.text,
+    this.press,
+    this.textColor,
+    this.icon,
+    this.icon2,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 10,
+      ),
+      width: MediaQuery.of(context).size.width * 0.9,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: FlatButton(
+          padding: EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 20,
+          ),
+          color: ThemeColors.kLightColor,
+          onPressed: press,
+          child: Row(
+            children: [
+              Icon(icon),
+              SizedBox(
+                width: 20,
+              ),
+              Expanded(
+                child: Text(
+                  text!,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: textColor,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              Icon(icon2),
+            ],
+          ),
         ),
       ),
     );
